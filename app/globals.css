@@ -1,0 +1,89 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 0 0% 98%;
+    --foreground: 0 0% 15%;
+    --card: 0 0% 100%;
+    --card-foreground: 0 0% 15%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 0 0% 15%;
+    --primary: 350 80% 35%;
+    --primary-light: 350 60% 85%;
+    --primary-dark: 350 70% 25%;
+    --primary-foreground: 0 0% 100%;
+    --secondary: 0 0% 96%;
+    --secondary-foreground: 0 0% 20%;
+    --muted: 0 0% 96%;
+    --muted-foreground: 0 0% 45%;
+    --accent: 45 90% 50%;
+    --accent-foreground: 0 0% 15%;
+    --gold: 45 90% 50%;
+    --gold-light: 45 90% 70%;
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 100%;
+    --border: 0 0% 90%;
+    --input: 0 0% 90%;
+    --ring: 350 80% 35%;
+    --radius: 0.75rem;
+    --pkured: 350 80% 35%;
+    --pkured-light: 350 60% 85%;
+    --pkured-dark: 350 70% 25%;
+  }
+
+  .dark {
+    --background: 0 0% 8%;
+    --foreground: 0 0% 95%;
+    --card: 0 0% 10%;
+    --card-foreground: 0 0% 95%;
+    --popover: 0 0% 10%;
+    --popover-foreground: 0 0% 95%;
+    --primary: 350 70% 45%;
+    --primary-light: 350 60% 75%;
+    --primary-dark: 350 80% 30%;
+    --primary-foreground: 0 0% 100%;
+    --secondary: 0 0% 15%;
+    --secondary-foreground: 0 0% 90%;
+    --muted: 0 0% 15%;
+    --muted-foreground: 0 0% 65%;
+    --accent: 45 90% 60%;
+    --accent-foreground: 0 0% 10%;
+    --gold: 45 90% 60%;
+    --gold-light: 45 90% 75%;
+    --destructive: 0 70% 50%;
+    --destructive-foreground: 0 0% 100%;
+    --border: 0 0% 20%;
+    --input: 0 0% 20%;
+    --ring: 350 70% 45%;
+    --pkured: 350 70% 45%;
+    --pkured-light: 350 60% 75%;
+    --pkured-dark: 350 80% 30%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+    font-feature-settings: "rlig" 1, "calt" 1;
+  }
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-semibold tracking-tight;
+  }
+  a {
+    @apply transition-colors duration-200;
+  }
+}
+
+@layer components {
+  .section-card {
+    @apply bg-card rounded-xl border border-border shadow-sm hover:shadow-md transition-shadow duration-300;
+  }
+  .academic-link {
+    @apply text-primary hover:text-primary-dark underline underline-offset-4 decoration-1 hover:decoration-2 transition-all duration-200;
+  }
+}
